@@ -1,0 +1,20 @@
+FROM dunglas/frankenphp:php8.2-alpine
+
+WORKDIR /app
+
+COPY . /app
+
+RUN apk add --no-cache \
+    libzip-dev \
+    icu-dev \
+    oniguruma-dev \
+    && docker-php-ext-install \
+    mbstring \
+    intl \
+    zip
+
+ENV SERVER_NAME=:80
+
+EXPOSE 80
+
+CMD ["frankenphp", "php-server", "--listen", ":80", "--root", "/app"]
