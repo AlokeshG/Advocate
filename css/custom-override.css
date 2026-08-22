@@ -2417,7 +2417,7 @@ body { padding-top:0; }
     border: 0 !important;
     border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 
-    color: #ffffff !important;
+    color: #fffefe !important;
 
     font-family: inherit !important;
     font-size: 14px !important;
@@ -2508,7 +2508,7 @@ body { padding-top:0; }
 
     background: transparent !important;
     border: 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    border-bottom: 1px solid rgba(204, 198, 198, 0.08) !important;
 
     color: #ffffff !important;
 
@@ -2583,4 +2583,224 @@ body { padding-top:0; }
         padding-top: 12px !important;
     }
 
+}
+/* =========================================================
+   FINAL FIX - GET IN TOUCH DROPDOWN TEXT
+   ========================================================= */
+
+.ve-footer #ve-footer-contact {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block;
+}
+
+.ve-footer #ve-footer-contact li {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+
+    margin-bottom: 8px !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.ve-footer #ve-footer-contact li i {
+    color: #b8862d !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.ve-footer #ve-footer-contact li a {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-footer #ve-footer-contact {
+        padding-top: 12px !important;
+
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .ve-footer #ve-footer-contact li {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+
+        margin-bottom: 8px !important;
+    }
+
+    .ve-footer #ve-footer-contact li i {
+        color: #b8862d !important;
+        opacity: 1 !important;
+    }
+
+    .ve-footer #ve-footer-contact li a {
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+}
+/* =========================================================
+   FINAL FIX - OUR SERVICES DROPDOWN TEXT
+   ========================================================= */
+
+.ve-footer #ve-footer-services {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block;
+}
+
+.ve-footer #ve-footer-services li {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+
+    margin-bottom: 8px !important;
+}
+
+.ve-footer #ve-footer-services li a {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    text-decoration: none !important;
+}
+
+.ve-footer #ve-footer-services li::marker {
+    color: #b8862d !important;
+}
+
+.ve-footer #ve-footer-services li a:hover {
+    color: #e8b84b !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-footer #ve-footer-services {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .ve-footer #ve-footer-services li {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+
+        margin-bottom: 8px !important;
+    }
+
+    .ve-footer #ve-footer-services li a {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+/* =========================================================
+   FINAL FIX - QUICK LINKS DROPDOWN TEXT
+   ========================================================= */
+
+.ve-footer #ve-footer-quick-links {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block;
+}
+
+.ve-footer #ve-footer-quick-links li {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+
+    margin-bottom: 8px !important;
+}
+
+.ve-footer #ve-footer-quick-links li a {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    text-decoration: none !important;
+}
+
+.ve-footer #ve-footer-quick-links li a:hover {
+    color: #e8b84b !important;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .ve-footer #ve-footer-quick-links {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .ve-footer #ve-footer-quick-links li {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .ve-footer #ve-footer-quick-links li a {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+/* Remove focus/active outline from footer accordion buttons */
+
+.ve-footer .ve-footer-dropdown-btn,
+.ve-footer .ve-footer-dropdown-btn:focus,
+.ve-footer .ve-footer-dropdown-btn:active,
+.ve-footer .ve-footer-dropdown-btn:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.12) !important;
 }

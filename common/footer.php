@@ -58,7 +58,7 @@ $answer_modal = $num1_modal + $num2_modal;
         aria-expanded="false"
     >
         <span>Quick Links</span>
-        <span class="ve-footer-dropdown-arrow">⌄</span>
+        <span class="ve-footer-dropdown-arrow">+</span>
     </button>
 
     <ul
@@ -96,7 +96,7 @@ $answer_modal = $num1_modal + $num2_modal;
     aria-expanded="false"
 >
     <span>Our Services</span>
-    <span class="ve-footer-dropdown-arrow">⌄</span>
+    <span class="ve-footer-dropdown-arrow">+</span>
 </button>
 
 <ul
@@ -161,7 +161,7 @@ $answer_modal = $num1_modal + $num2_modal;
     aria-expanded="false"
 >
     <span>Get In Touch</span>
-    <span class="ve-footer-dropdown-arrow">⌄</span>
+    <span class="ve-footer-dropdown-arrow">+</span>
 </button>
 
                 <div
@@ -1008,31 +1008,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<!-- ================= FOOTER DROPDOWN ================= -->
 
-    const button = document.getElementById("ve-footer-quick-links-btn");
-    const menu = document.getElementById("ve-footer-quick-links");
-
-    if (!button || !menu) {
-        return;
-    }
-
-    button.addEventListener("click", function () {
-
-        const isOpen = menu.classList.toggle("is-open");
-
-        button.classList.toggle("is-open", isOpen);
-
-        button.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
-
-    });
-
-});
-</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1042,39 +1019,53 @@ document.addEventListener("DOMContentLoaded", function () {
         const content = document.getElementById(contentId);
 
         if (!button || !content) {
+            console.error(
+                "Footer dropdown not found:",
+                buttonId,
+                contentId
+            );
             return;
         }
 
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function (event) {
 
-            const isOpen = content.classList.toggle("is-open");
+            event.preventDefault();
+            event.stopPropagation();
 
-            button.classList.toggle("is-open", isOpen);
+            const isOpen = content.classList.contains("is-open");
 
+            /* Close this dropdown */
+            content.classList.toggle("is-open", !isOpen);
+
+            /* Rotate arrow */
+            button.classList.toggle("is-open", !isOpen);
+
+            /* Accessibility */
             button.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                !isOpen ? "true" : "false"
             );
 
         });
+
     }
 
 
-    /* Quick Links */
+    /* QUICK LINKS */
     setupFooterDropdown(
         "ve-footer-quick-links-btn",
         "ve-footer-quick-links"
     );
 
 
-    /* Our Services */
+    /* OUR SERVICES */
     setupFooterDropdown(
         "ve-footer-services-btn",
         "ve-footer-services"
     );
 
 
-    /* Get In Touch */
+    /* GET IN TOUCH */
     setupFooterDropdown(
         "ve-footer-contact-btn",
         "ve-footer-contact"
