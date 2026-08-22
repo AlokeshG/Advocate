@@ -1173,15 +1173,58 @@ body { padding-top:0; }
     resize: vertical;
 }
 
-/* Close button */
-#ve-quote-modal .ve-modal-close {
-    width: 32px;
-    height: 32px;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
+/* =========================================================
+   GET QUOTE - CLOSE BUTTON
+   Keep the X in the CENTER of the dark header vertically.
+   The button is positioned relative to the modal dialog.
+   ========================================================= */
+
+/* =========================================================
+   GET QUOTE - CLOSE BUTTON AT TOP CENTER
+   ========================================================= */
+
+#ve-quote-modal .ve-modal-dialog {
+    position: relative !important;
 }
 
+#ve-quote-modal .ve-modal-close {
+    position: absolute !important;
+
+    /* TOP CENTER */
+    top: -15px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+    border: 1px solid #dce2e8 !important;
+
+    background: #ffffff !important;
+    color: #0d1b2a !important;
+
+    font-size: 17px !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+
+    z-index: 99999 !important;
+    box-sizing: border-box !important;
+}
+
+#ve-quote-modal .ve-modal-close:hover {
+    background: #b07c2c !important;
+    color: #ffffff !important;
+}
 /* Submit button */
 #ve-quote-modal .ve-btn-primary {
     width: 100%;
@@ -1266,13 +1309,14 @@ body { padding-top:0; }
         min-height: 38px;
     }
 
-    /* Close */
+    /* Close button - stays at the top-right of the header */
     #ve-quote-modal .ve-modal-close {
-        width: 30px;
-        height: 30px;
-        top: 8px;
-        right: 8px;
-        font-size: 17px;
+        width: 30px !important;
+        height: 30px !important;
+        top: 8px !important;
+        right: 8px !important;
+        font-size: 17px !important;
+        transform: none !important;
     }
 }
 
@@ -2132,4 +2176,411 @@ body { padding-top:0; }
     100% {
         transform: translate(24px, 0);
     }
+}
+
+/* =========================================================
+   FINAL GET QUOTE CLOSE-BUTTON POSITION OVERRIDE
+   ========================================================= */
+
+#ve-quote-modal .ve-modal-dialog {
+    position: relative !important;
+}
+
+#ve-quote-modal .ve-modal-close {
+    position: absolute !important;
+    top: 14px !important;
+    right: 12px !important;
+    transform: none !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    z-index: 99999 !important;
+}
+
+@media (max-width: 767px) {
+    #ve-quote-modal .ve-modal-close {
+        top: 8px !important;
+        right: 8px !important;
+        transform: none !important;
+    }
+}
+/* =========================================================
+   REDUCE MOBILE HERO TOP SPACE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-hero {
+        padding-top: 45px !important;
+    }
+
+    .ve-hero-content {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+}
+/* Explore Services button text */
+.ve-hero .ve-btn-primary {
+    color: #ffffff !important;
+}
+/* =========================================================
+   MOBILE HERO STATS - KEEP ALL 3 IN ONE ROW
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-hero-stats {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .ve-stat {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .ve-stat strong {
+        font-size: 19px !important;
+        white-space: nowrap !important;
+    }
+
+    .ve-stat span {
+        display: block !important;
+        font-size: 8px !important;
+        letter-spacing: 0.5px !important;
+        white-space: nowrap !important;
+    }
+
+    .ve-stat-divider {
+        flex: 0 0 1px !important;
+        width: 1px !important;
+        height: 35px !important;
+    }
+}
+@media (max-width: 767px) {
+
+    #services,
+    .services-area,
+    .ve-services-section,
+    .ve-services {
+        padding-top: 25px !important;
+        margin-top: 0 !important;
+    }
+
+    #services .ve-section-head,
+    .services-area .ve-section-head,
+    .ve-services-section .ve-section-head,
+    .ve-services .ve-section-head {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+/* =========================================================
+   SERVICE CARDS - CENTER CONTENT ON MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-service-card {
+        text-align: center !important;
+    }
+
+    .ve-service-card .ve-service-icon {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .ve-service-card h4 {
+        text-align: center !important;
+    }
+
+    .ve-service-card p {
+        text-align: center !important;
+    }
+
+    .ve-service-card .ve-card-link {
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+}
+/* =========================================================
+   WHY US - MOBILE IMAGE POSITION + TOP SPACE FIX
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Remove extra space above the image section */
+    .ve-whyus {
+        padding-top: 20px !important;
+        margin-top: 0 !important;
+    }
+
+    .ve-whyus .container,
+    .ve-whyus .row {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Make image area full available width */
+    .ve-whyus-img-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        position: relative !important;
+    }
+
+    /* Center image */
+    .ve-whyus-img-main {
+        width: 100% !important;
+        max-width: 350px !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    /* Smaller experience badge */
+    .ve-whyus-badge {
+        width: 145px !important;
+        min-width: 145px !important;
+
+        padding: 12px 14px !important;
+
+        right: 4px !important;
+        bottom: 6px !important;
+
+        border-radius: 11px !important;
+        text-align: center !important;
+    }
+
+    .ve-whyus-badge strong {
+        font-size: 24px !important;
+        line-height: 1 !important;
+    }
+
+    .ve-whyus-badge span {
+        font-size: 7px !important;
+        letter-spacing: 0.3px !important;
+        white-space: nowrap !important;
+    }
+}
+/* =========================================================
+   CLIENT REVIEWS - REDUCE TOP SPACE ON MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .ve-testimonials {
+        padding-top: 10px !important;
+    }
+}
+/* =========================================================
+   FOOTER QUICK LINKS DROPDOWN
+   ========================================================= */
+
+.ve-footer-dropdown-btn {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 0 0 12px !important;
+
+    margin: 0 0 14px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+
+    cursor: pointer !important;
+
+    text-align: left !important;
+}
+
+.ve-footer-dropdown-arrow {
+    font-size: 20px !important;
+    line-height: 1 !important;
+
+    color: var(--ve-gold) !important;
+
+    transition: transform 0.25s ease !important;
+}
+
+/* Hidden by default on mobile */
+.ve-footer-dropdown-content {
+    display: none !important;
+}
+
+/* Open state */
+.ve-footer-dropdown-content.is-open {
+    display: block !important;
+}
+
+/* Rotate arrow */
+.ve-footer-dropdown-btn.is-open .ve-footer-dropdown-arrow {
+    transform: rotate(180deg) !important;
+}
+
+
+/* =========================================================
+   DESKTOP - ALWAYS SHOW QUICK LINKS
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .ve-footer-dropdown-btn {
+        cursor: default !important;
+    }
+
+    .ve-footer-dropdown-content {
+        display: block !important;
+    }
+
+    .ve-footer-dropdown-arrow {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-footer-dropdown-btn {
+        margin-bottom: 0 !important;
+    }
+
+    .ve-footer-dropdown-content {
+        padding-top: 12px !important;
+    }
+
+}
+/* =========================================================
+   FOOTER DROPDOWNS
+   Quick Links + Our Services + Get In Touch
+   ========================================================= */
+
+.ve-footer-dropdown-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 0 0 12px !important;
+    margin: 0 0 14px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+
+    text-align: left !important;
+    cursor: pointer !important;
+}
+
+.ve-footer-dropdown-arrow {
+    color: var(--ve-gold) !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+
+    transition: transform 0.25s ease !important;
+}
+
+/* Closed on mobile */
+.ve-footer-dropdown-content {
+    display: none !important;
+}
+
+/* Open */
+.ve-footer-dropdown-content.is-open {
+    display: block !important;
+}
+
+/* Rotate arrow */
+.ve-footer-dropdown-btn.is-open .ve-footer-dropdown-arrow {
+    transform: rotate(180deg) !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+   Keep everything visible
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .ve-footer-dropdown-content {
+        display: block !important;
+    }
+
+    .ve-footer-dropdown-btn {
+        cursor: default !important;
+    }
+
+    .ve-footer-dropdown-arrow {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-footer-dropdown-btn {
+        margin-bottom: 0 !important;
+    }
+
+    .ve-footer-dropdown-content {
+        padding-top: 12px !important;
+    }
+
 }

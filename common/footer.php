@@ -48,40 +48,61 @@ $answer_modal = $num1_modal + $num2_modal;
 
 
             <!-- Col 2: Quick Links -->
-            <div class="col-12 col-sm-6 col-lg-2 mb-50">
+            <!-- Col 2: Quick Links -->
+<div class="col-12 col-sm-6 col-lg-2 mb-50">
 
-                <h5 class="ve-footer-title">Quick Links</h5>
+    <button
+        type="button"
+        class="ve-footer-dropdown-btn"
+        id="ve-footer-quick-links-btn"
+        aria-expanded="false"
+    >
+        <span>Quick Links</span>
+        <span class="ve-footer-dropdown-arrow">⌄</span>
+    </button>
 
-                <ul class="ve-footer-links">
+    <ul
+        class="ve-footer-links ve-footer-dropdown-content"
+        id="ve-footer-quick-links"
+    >
 
-                    <li>
-                        <a href="index.php">Home</a>
-                    </li>
+        <li>
+            <a href="index.php">Home</a>
+        </li>
 
-                    <li>
-                        <a href="about.php">About Us</a>
-                    </li>
+        <li>
+            <a href="about.php">About Us</a>
+        </li>
 
-                    <!-- FIXED SERVICES LINK -->
-                    <li>
-                        <a href="services.php">Services</a>
-                    </li>
+        <li>
+            <a href="services.php">Services</a>
+        </li>
 
-                    <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
+        <li>
+            <a href="contact.php">Contact</a>
+        </li>
 
-                </ul>
+    </ul>
 
-            </div>
+</div>
 
 
             <!-- Col 3: Services -->
             <div class="col-12 col-sm-6 col-lg-3 mb-50">
+<button
+    type="button"
+    class="ve-footer-dropdown-btn"
+    id="ve-footer-services-btn"
+    aria-expanded="false"
+>
+    <span>Our Services</span>
+    <span class="ve-footer-dropdown-arrow">⌄</span>
+</button>
 
-                <h5 class="ve-footer-title">Our Services</h5>
-
-                <ul class="ve-footer-links">
+<ul
+    class="ve-footer-links ve-footer-dropdown-content"
+    id="ve-footer-services"
+>
 
                     <li>
                         <a href="trademark-registration.php">
@@ -133,9 +154,20 @@ $answer_modal = $num1_modal + $num2_modal;
             <!-- Col 4: Contact -->
             <div class="col-12 col-sm-6 col-lg-3 mb-50">
 
-                <h5 class="ve-footer-title">Get In Touch</h5>
+                <button
+    type="button"
+    class="ve-footer-dropdown-btn"
+    id="ve-footer-contact-btn"
+    aria-expanded="false"
+>
+    <span>Get In Touch</span>
+    <span class="ve-footer-dropdown-arrow">⌄</span>
+</button>
 
-                <ul class="ve-footer-contact">
+                <div
+    class="ve-footer-dropdown-content"
+    id="ve-footer-contact"
+>
 
                     <!-- UPDATED ADDRESS -->
                     <li>
@@ -171,7 +203,7 @@ $answer_modal = $num1_modal + $num2_modal;
                         Sunday: Closed
                     </li>
 
-                </ul>
+                </div>
 
             </div>
 
@@ -973,6 +1005,80 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button = document.getElementById("ve-footer-quick-links-btn");
+    const menu = document.getElementById("ve-footer-quick-links");
+
+    if (!button || !menu) {
+        return;
+    }
+
+    button.addEventListener("click", function () {
+
+        const isOpen = menu.classList.toggle("is-open");
+
+        button.classList.toggle("is-open", isOpen);
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+    });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function setupFooterDropdown(buttonId, contentId) {
+
+        const button = document.getElementById(buttonId);
+        const content = document.getElementById(contentId);
+
+        if (!button || !content) {
+            return;
+        }
+
+        button.addEventListener("click", function () {
+
+            const isOpen = content.classList.toggle("is-open");
+
+            button.classList.toggle("is-open", isOpen);
+
+            button.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        });
+    }
+
+
+    /* Quick Links */
+    setupFooterDropdown(
+        "ve-footer-quick-links-btn",
+        "ve-footer-quick-links"
+    );
+
+
+    /* Our Services */
+    setupFooterDropdown(
+        "ve-footer-services-btn",
+        "ve-footer-services"
+    );
+
+
+    /* Get In Touch */
+    setupFooterDropdown(
+        "ve-footer-contact-btn",
+        "ve-footer-contact"
+    );
 
 });
 </script>
