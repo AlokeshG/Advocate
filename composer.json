@@ -1,0 +1,8 @@
+{
+  "name": "advocateroshani/site",
+  "description": "advocateroshani website mailer dependencies",
+  "type": "project",
+  "require": {
+    "phpmailer/phpmailer": "^6.10"
+  }
+}
