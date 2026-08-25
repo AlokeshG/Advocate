@@ -333,7 +333,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
   padding:16px 34px; border-radius:8px; font-weight:800; font-size: 13.54px;
   text-decoration:none; transition:var(--ve-trans);
 }
-.ve-btn-white:hover { background:var(--ve-gold); color:var(--ve-dark); transform:translateY(-2px); }
+.ve-btn-white:hover { background:var(--ve-gold); color: #ffffff !important; transform:translateY(-2px); }
 .text-lg-right { text-align:right; }
 
 /* ============================================================
@@ -1407,18 +1407,17 @@ body { padding-top:0; }
 .ve-ai-assistant-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
 
-    height: 62px;
-    min-width: 172px;
+    height: 50px;
+    min-width: 135px;
 
-    padding: 6px 16px 6px 7px;
+    padding: 4px 10px 4px 5px;
 
     border: 2px solid rgba(255, 255, 255, 0.25);
-    border-radius: 18px;
+    border-radius: 10px;
 
     background: #08777c;
-
     color: #ffffff;
 
     box-shadow:
@@ -1457,10 +1456,9 @@ body { padding-top:0; }
    ========================================================= */
 
 .ve-ai-assistant-logo {
-    width: 48px;
-    height: 48px;
-
-    flex: 0 0 48px;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
 
     display: flex;
     align-items: center;
@@ -1479,8 +1477,8 @@ body { padding-top:0; }
 
 
 .ve-ai-assistant-logo img {
-    width: 100%;
-    height: 100%;
+    width: 36px !important;
+     height: 36px !important;
 
     object-fit: contain;
 
@@ -1504,7 +1502,7 @@ body { padding-top:0; }
 .ve-ai-assistant-title {
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
 
     line-height: 1;
@@ -1542,35 +1540,27 @@ body { padding-top:0; }
     }
 
 
-    .ve-ai-assistant-btn {
-        min-width: 154px;
-
-        height: 56px;
-
-        padding: 5px 13px 5px 6px;
-
-        gap: 8px;
-
-        border-radius: 16px;
+     .ve-ai-assistant-btn {
+        min-width: 130px;
+        height: 48px;
+        padding: 4px 10px 4px 5px;
+        gap: 7px;
+        border-radius: 13px;
     }
-
 
     .ve-ai-assistant-logo {
-        width: 44px;
-        height: 44px;
-
-        flex-basis: 44px;
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
     }
-
 
     .ve-ai-assistant-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-
     .ve-ai-status {
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
     }
 }
 
@@ -1618,7 +1608,7 @@ body { padding-top:0; }
     position: fixed;
 
     right: 24px;
-    bottom: 95px;
+    bottom: 100px;
 
     width: 360px;
     height: 500px;
@@ -1641,13 +1631,15 @@ body { padding-top:0; }
         0 20px 60px rgba(0,0,0,0.30);
 
     z-index: 100001;
+
+    display: none;
 }
 
 
 /* OPEN CHAT */
 
 .ve-ai-chat.is-open {
-    display: flex;
+    display: flex !important;
 }
 
 
@@ -1976,20 +1968,17 @@ body { padding-top:0; }
 @media (max-width: 767px) {
 
     .ve-ai-chat {
+        position: fixed !important;
 
-        right: 10px;
+        right: 10px !important;
+        bottom: 70px !important;
 
-        bottom: 80px;
+        width: calc(100vw - 20px) !important;
+        max-width: 360px !important;
 
-        width: calc(100vw - 20px);
+        height: 460px !important;
 
-        max-width: 360px;
-
-        height: 460px;
-
-        max-height: calc(100vh - 105px);
-
-        border-radius: 16px;
+        z-index: 100001 !important;
     }
 
 
@@ -2041,6 +2030,8 @@ body { padding-top:0; }
         width: calc(100vw - 16px);
 
         height: 430px;
+
+        display: none;
     }
 
 }
@@ -2049,24 +2040,30 @@ body { padding-top:0; }
    =============================== */
 
 .ve-ai-status {
-    width: 7px !important;
-    height: 7px !important;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2ecc71;
+    display: inline-block;
 
-    min-width: 7px !important;
-    min-height: 7px !important;
-
-    display: inline-block !important;
-
-    margin-left: 5px !important;
-
-    border-radius: 50% !important;
-
-    background: #2ecc71 !important;
-
-    box-shadow: 0 0 0 rgba(46, 204, 113, 0.7);
-
-    animation: ve-ai-dot-blink 1.2s infinite ease-in-out !important;
+    animation: onlineBlink 1.2s infinite ease-in-out;
 }
+
+@keyframes onlineBlink {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(0.8);
+        box-shadow: 0 0 0 5px rgba(46, 204, 113, 0);
+    }
+}
+
 
 
 /* Blinking animation */
@@ -2803,4 +2800,424 @@ body { padding-top:0; }
     box-shadow: none !important;
     border: none !important;
     border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+/* =========================================================
+   AI ASSISTANT - ALL ONLINE DOTS
+   ========================================================= */
+
+.ve-ai-status,
+.ve-ai-online i {
+    display: inline-block !important;
+
+    border-radius: 50% !important;
+
+    background: #2ecc71 !important;
+
+    animation: veOnlineDotBlink 1s infinite ease-in-out !important;
+
+    transform-origin: center center !important;
+}
+
+
+/* Floating button dot */
+.ve-ai-status {
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    min-height: 8px !important;
+    flex: 0 0 8px !important;
+}
+
+
+/* Chat header Online dot */
+.ve-ai-online i {
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    min-height: 7px !important;
+}
+
+
+/* =========================================================
+   BLINK ANIMATION
+   ========================================================= */
+
+@keyframes veOnlineDotBlink {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+
+        box-shadow:
+            0 0 0 0 rgba(46, 204, 113, 0.7),
+            0 0 8px rgba(46, 204, 113, 0.55);
+    }
+
+    50% {
+        opacity: 0.2;
+        transform: scale(0.65);
+
+        box-shadow:
+            0 0 0 5px rgba(46, 204, 113, 0),
+            0 0 3px rgba(46, 204, 113, 0.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+
+        box-shadow:
+            0 0 0 0 rgba(46, 204, 113, 0.7),
+            0 0 8px rgba(46, 204, 113, 0.55);
+    }
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .ve-ai-status,
+    .ve-ai-online i {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+/* =========================================================
+   AI ASSISTANT - MOBILE QUICK BUTTONS
+   ========================================================= */
+
+.ve-ai-chat-suggestions {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 7px !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    padding: 9px 10px !important;
+
+    overflow: visible !important;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.ve-ai-chat-suggestions button {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+
+    min-height: 36px !important;
+
+    height: 36px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 5px !important;
+
+    padding: 5px 6px !important;
+
+    border: 1px solid #d8dee6 !important;
+
+    border-radius: 16px !important;
+
+    background: #ffffff !important;
+
+    color: #0d1b2a !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+
+    overflow: hidden !important;
+
+    text-overflow: ellipsis !important;
+
+    cursor: pointer;
+}
+
+
+.ve-ai-chat-suggestions button i {
+    flex: 0 0 auto;
+
+    font-size: 10px;
+}
+
+
+.ve-ai-chat-suggestions button:hover {
+    background: #08777c !important;
+
+    color: #ffffff !important;
+
+    border-color: #08777c !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-ai-chat-suggestions {
+        display: grid !important;
+
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 6px !important;
+
+        padding: 8px 9px !important;
+
+        overflow: visible !important;
+
+        max-height: none !important;
+
+        width: 100% !important;
+    }
+
+
+    .ve-ai-chat-suggestions button {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        height: 34px !important;
+
+        min-height: 34px !important;
+
+        padding: 5px 4px !important;
+
+        font-size: 10px !important;
+
+        border-radius: 14px !important;
+    }
+
+}
+/* =========================================================
+   GET FREE CONSULTATION POPUP - FINAL FIX
+   ========================================================= */
+
+#ve-quote-modal {
+    display: none !important;
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    z-index: 999999 !important;
+
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+
+    overflow-y: auto !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+}
+
+
+#ve-quote-modal.is-open {
+    display: flex !important;
+}
+
+
+/* Background */
+
+#ve-quote-modal .ve-modal-backdrop {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    background: rgba(
+        5,
+        15,
+        28,
+        0.72
+    ) !important;
+
+    z-index: 1 !important;
+}
+
+
+/* Popup */
+
+#ve-quote-modal .ve-modal-dialog {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    width: 100% !important;
+
+    max-width: 480px !important;
+
+    max-height: 90vh !important;
+
+    margin: auto !important;
+
+    overflow-y: auto !important;
+
+    background: #ffffff !important;
+
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 25px 70px rgba(
+            0,
+            0,
+            0,
+            0.35
+        ) !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    #ve-quote-modal {
+
+        padding: 12px !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+    }
+
+
+    #ve-quote-modal .ve-modal-dialog {
+
+        width: 92% !important;
+
+        max-width: 360px !important;
+
+        max-height: 88vh !important;
+
+        border-radius: 14px !important;
+
+    }
+
+}
+
+/* =========================================================
+   FINAL FIX - GET FREE CONSULTATION CLOSE BUTTON
+   Keep the X at the top-right without covering the title.
+   ========================================================= */
+
+#ve-quote-modal .ve-modal-dialog {
+    position: relative !important;
+}
+
+#ve-quote-modal .ve-modal-head {
+    position: relative !important;
+    padding-right: 62px !important;
+}
+
+#ve-quote-modal .ve-modal-head h3 {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    overflow-wrap: normal !important;
+}
+
+#ve-quote-modal .ve-modal-close {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    left: auto !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    transform: none !important;
+
+    border-radius: 50% !important;
+    border: 1px solid #dce2e8 !important;
+
+    background: #ffffff !important;
+    color: #0d1b2a !important;
+
+    box-sizing: border-box !important;
+    z-index: 99999 !important;
+
+    font-size: 18px !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+#ve-quote-modal .ve-modal-close:hover {
+    background: #b07c2c !important;
+    color: #ffffff !important;
+    transform: none !important;
+}
+
+@media (max-width: 767px) {
+
+    #ve-quote-modal .ve-modal-head {
+        padding-right: 52px !important;
+    }
+
+    #ve-quote-modal .ve-modal-close {
+        top: 10px !important;
+        right: 10px !important;
+
+        width: 30px !important;
+        height: 30px !important;
+
+        font-size: 17px !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #ve-quote-modal .ve-modal-head {
+        padding-right: 48px !important;
+    }
+
+    #ve-quote-modal .ve-modal-close {
+        top: 9px !important;
+        right: 9px !important;
+    }
+}
+.ve-whyus-btn {
+    color: #ffffff !important;
+}
+
+.ve-whyus-btn:hover {
+    color: #ffffff !important;
 }
