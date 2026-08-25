@@ -3221,3 +3221,338 @@ body { padding-top:0; }
 .ve-whyus-btn:hover {
     color: #ffffff !important;
 }
+/* =========================================================
+   MOBILE FOOTER - CENTER BRAND & LINKEDIN
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Reduce empty space above footer brand */
+    .ve-footer {
+        padding-top: 25px !important;
+    }
+
+    /* Center logo and description */
+    .ve-footer-brand {
+        text-align: center !important;
+    }
+
+    .ve-footer-brand .ve-logo {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto 12px !important;
+    }
+
+    .ve-footer-brand .ve-logo a {
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .ve-footer-brand .ve-logo-img {
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    .ve-footer-brand p {
+        text-align: center !important;
+        margin: 0 auto 18px !important;
+    }
+
+    /* Center LinkedIn */
+    .ve-footer-brand .ve-social {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .ve-footer-brand .ve-social a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - REDUCE CLIENT REVIEWS TOP SPACE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-testimonials-section,
+    .ve-reviews-section {
+        padding-top: 35px !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - MAKE COUNTER ITEMS SMALLER
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-counter-section {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .ve-counter-grid {
+        gap: 0 !important;
+    }
+
+    .ve-counter-item {
+        min-height: 0 !important;
+        height: auto !important;
+
+        padding: 22px 10px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .ve-counter-item i {
+        font-size: 25px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .ve-counter-item strong {
+        font-size: 34px !important;
+        line-height: 1 !important;
+    }
+
+    .ve-counter-item > span {
+        font-size: 17px !important;
+    }
+
+    .ve-counter-item p {
+        margin-top: 7px !important;
+        margin-bottom: 0 !important;
+
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - REDUCE GAP AFTER WHY CHOOSE US
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Reduce bottom space of Why Choose Us section */
+    .ve-why-section {
+        padding-bottom: 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Reduce space around the button */
+    .ve-why-section .ve-btn-primary {
+        margin-bottom: 10px !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - REDUCE GAP BEFORE FREE LEGAL CONSULTATION
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Reduce bottom space from the contact information section */
+    .ve-contact-section {
+        padding-bottom: 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Reduce top space of the consultation section */
+    .ve-consultation-section {
+        padding-top: 20px !important;
+        margin-top: 0 !important;
+    }
+
+}
+/* Reduce gap before consultation card on mobile */
+@media (max-width: 767px) {
+
+    .ve-consultation-section {
+        padding-top: 5px !important;
+        margin-top: 0 !important;
+    }
+
+    .ve-consultation-section .container {
+        padding-top: 0 !important;
+    }
+
+}
+@media (max-width: 767px) {
+
+    .ve-contact-section {
+        padding-top: 5px !important;
+        margin-top: 0 !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - FIX MISSION / VISION / VALUES HEADER
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .ve-mvv-section {
+        position: relative !important;
+
+        /* Create space ABOVE the section */
+        margin-top: 40px !important;
+
+        /* Space inside the section */
+        padding-top: 35px !important;
+
+        overflow: visible !important;
+
+        z-index: 5 !important;
+    }
+
+
+    .ve-mvv-section .ve-section-header {
+        position: relative !important;
+
+        z-index: 10 !important;
+
+        margin-top: 0 !important;
+
+        padding-top: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    .ve-mvv-section .ve-section-tag {
+        position: relative !important;
+
+        z-index: 20 !important;
+
+        display: inline-block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        margin-top: 0 !important;
+
+        margin-bottom: 12px !important;
+
+        transform: none !important;
+    }
+
+
+    .ve-mvv-section .ve-section-header h2 {
+        margin-top: 0 !important;
+    }
+
+}
+/* =========================================================
+   MISSION / VISION / VALUES
+   FIX "OUR FOUNDATION" CROPPING
+   ========================================================= */
+
+.ve-mvv-section {
+    position: relative !important;
+    overflow: visible !important;
+    padding-top: 100px !important;
+}
+
+.ve-mvv-section .ve-section-header {
+    position: relative !important;
+    z-index: 5 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ve-mvv-section .ve-section-tag {
+    position: relative !important;
+    z-index: 10 !important;
+    display: inline-block !important;
+    margin-top: 0 !important;
+    transform: none !important;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .ve-mvv-section {
+        padding-top: 60px !important;
+    }
+
+    .ve-mvv-section .ve-section-header {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+/* =========================================================
+   MOBILE - REMOVE ALL EXTRA GAP BEFORE CTA
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* CTA banner itself */
+    .ve-cta-banner {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        padding-top: 0 !important;
+        padding-bottom: 25px !important;
+
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    /* CTA container */
+    .ve-cta-banner .ve-cta-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Bootstrap container */
+    .ve-cta-banner .container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Row */
+    .ve-cta-banner .row {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Heading area */
+    .ve-cta-banner h2 {
+        margin-top: 0 !important;
+    }
+
+    /* Section tag */
+    .ve-cta-banner .ve-section-tag {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+@media (max-width: 767px) {
+
+    /* Remove bottom spacing from section before CTA */
+    .ve-cta-banner {
+        margin-top: 0 !important;
+    }
+
+    .ve-cta-banner::before {
+        display: none !important;
+    }
+
+}
