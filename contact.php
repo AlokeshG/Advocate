@@ -156,14 +156,39 @@ $answer_contact = $num1_contact + $num2_contact;
 
                             <div class="ve-form-group">
 
-                                <label>Phone Number</label>
+                               <label>PHONE NUMBER</label>
 
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Your phone"
-                                    required
-                                >
+<div class="ve-phone-input">
+
+    <select
+        name="country_code"
+        class="ve-country-code"
+        aria-label="Country code"
+    >
+        <option value="+91">India (+91)</option>
+        <option value="+1">United States (+1)</option>
+        <option value="+44">United Kingdom (+44)</option>
+        <option value="+61">Australia (+61)</option>
+        <option value="+971">UAE (+971)</option>
+        <option value="+65">Singapore (+65)</option>
+        <option value="+1">Canada (+1)</option>
+    </select>
+
+    <input
+    type="tel"
+    name="phone"
+    class="ve-phone-number"
+    placeholder="Your phone number"
+    inputmode="numeric"
+    autocomplete="tel"
+    pattern="[0-9]{10}"
+    maxlength="10"
+    minlength="10"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    required
+>
+
+</div>
 
                             </div>
 

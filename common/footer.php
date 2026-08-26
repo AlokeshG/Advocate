@@ -1,3 +1,28 @@
+<!-- =========================================================
+     WHITE LOGO OVERRIDE
+     ========================================================= -->
+<style>
+.ve-footer .ve-logo-img,
+.ve-ai-assistant-logo img,
+.ve-ai-chat-logo img {
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
+}
+
+.ve-footer .ve-logo-img {
+    display: block !important;
+    width: 180px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 767px) {
+    .ve-footer .ve-logo-img {
+        width: 145px !important;
+    }
+}
+</style>
+
 <?php
 $num1_modal = rand(1,10);
 $num2_modal = rand(1,10);
@@ -17,11 +42,11 @@ $answer_modal = $num1_modal + $num2_modal;
 
                     <div class="ve-logo">
                         <a href="index.php">
-                            <img
-                                src="img/core-img/logo__3___1_-removebg-preview.png"
-                                alt="Advocate Roshani - Legal Solutions"
-                                class="ve-logo-img"
-                            >
+                           <img
+    src="img/core-img/logo-white.png?v=2"
+    alt="Advocate Roshani - Legal Solutions"
+    class="ve-logo-img"
+>
                         </a>
                     </div>
 
@@ -546,11 +571,10 @@ $answer_modal = $num1_modal + $num2_modal;
     >
 
         <span class="ve-ai-assistant-logo">
-
-            <img
-                src="img/core-img/logo__3___1_-removebg-preview.png"
-                alt="Advocate Roshani Assistant"
-            >
+<img 
+    src="img/core-img/logo-white.png?v=3"
+    alt="Advocate Roshani Assistant"
+>
 
         </span>
 
@@ -585,14 +609,14 @@ $answer_modal = $num1_modal + $num2_modal;
 
         <div class="ve-ai-chat-brand">
 
-            <div class="ve-ai-chat-logo">
+          <div class="ve-ai-chat-logo">
 
-                <img
-                    src="img/core-img/logo__3___1_-removebg-preview.png"
-                    alt="Advocate Roshani Assistant"
-                >
+    <img
+        src="img/core-img/logo-white.png?v=3"
+        alt="Advocate Roshani Assistant"
+    >
 
-            </div>
+</div>
 
             <div class="ve-ai-chat-info">
 

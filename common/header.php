@@ -558,17 +558,17 @@ $isHomePage =
         <!-- Logo -->
         <div class="ve-logo">
 
-            <a href="index.php">
+    <a href="index.php">
 
-                <img
-                    src="img/core-img/logo__3___1_-removebg-preview.png"
-                    alt="Advocate Roshani - Legal Solutions"
-                    class="ve-logo-img"
-                >
+        <img
+            src="img/core-img/logo-white.png"
+            alt="Advocate Roshani - Legal Solutions"
+            class="ve-logo-img"
+        >
 
-            </a>
+    </a>
 
-        </div>
+</div>
 
 
         <!-- Navigation -->
@@ -583,61 +583,64 @@ $isHomePage =
                 </li>
 
 
-                <li class="has-drop">
+                <li class="has-drop ve-mobile-services">
 
-                    <a href="services.php">
-                        Services
-                        <i class="fa fa-angle-down"></i>
-                    </a>
+    <a
+        href="services.php"
+        class="ve-services-toggle"
+        aria-expanded="false"
+    >
+        <span>Services</span>
+        <i class="fa fa-angle-down"></i>
+    </a>
 
+    <ul class="ve-dropdown">
 
-                    <ul class="ve-dropdown">
+        <li>
+            <a href="trademark-registration.php">
+                Trademark Registration
+            </a>
+        </li>
 
-                        <li>
-                            <a href="trademark-registration.php">
-                                Trademark Registration
-                            </a>
-                        </li>
+        <li>
+            <a href="copyright-registration.php">
+                Copyright Registration
+            </a>
+        </li>
 
-                        <li>
-                            <a href="copyright-registration.php">
-                                Copyright Registration
-                            </a>
-                        </li>
+        <li>
+            <a href="brand-protection.php">
+                Logo &amp; Brand Protection
+            </a>
+        </li>
 
-                        <li>
-                            <a href="brand-protection.php">
-                                Logo & Brand Protection
-                            </a>
-                        </li>
+        <li>
+            <a href="legal-notice-drafting.php">
+                Legal Notice Drafting
+            </a>
+        </li>
 
-                        <li>
-                            <a href="legal-notice-drafting.php">
-                                Legal Notice Drafting
-                            </a>
-                        </li>
+        <li>
+            <a href="property-legal-services.php">
+                Property Legal Services
+            </a>
+        </li>
 
-                        <li>
-                            <a href="property-legal-services.php">
-                                Property Legal Services
-                            </a>
-                        </li>
+        <li>
+            <a href="agreement-documentation.php">
+                Agreement &amp; Documentation
+            </a>
+        </li>
 
-                        <li>
-                            <a href="agreement-documentation.php">
-                                Agreement & Documentation
-                            </a>
-                        </li>
+        <li>
+            <a href="business-legal-consulting.php">
+                Business Legal Consulting
+            </a>
+        </li>
 
-                        <li>
-                            <a href="business-legal-consulting.php">
-                                Business Legal Consulting
-                            </a>
-                        </li>
+    </ul>
 
-                    </ul>
-
-                </li>
+</li>
 
 
                 <li>
