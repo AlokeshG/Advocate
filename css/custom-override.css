@@ -4399,3 +4399,96 @@ body { padding-top:0; }
         background: rgba(255,255,255,0.05) !important;
     }
 }
+/* =========================================
+   TOP INFORMATION BAR - WHITE TEXT
+========================================= */
+
+.ve-top-bar,
+.ve-top-bar *,
+.ve-trust-bar,
+.ve-trust-bar * {
+    color: #ffffff !important;
+}
+
+/* Keep Font Awesome icons white */
+.ve-top-bar i,
+.ve-trust-bar i {
+    color: #ffffff !important;
+}
+/* ========================================
+   NAV GET QUOTE BUTTON - WHITE TEXT
+======================================== */
+
+.ve-cta-btn {
+    color: #ffffff !important;
+}
+
+.ve-cta-btn i {
+    color: #ffffff !important;
+}
+/* ========================================
+   KNOW MORE ABOUT US - WHITE TEXT
+======================================== */
+
+.ve-btn-primary {
+    color: #ffffff !important;
+}
+
+.ve-btn-primary:hover,
+.ve-btn-primary:focus {
+    color: #ffffff !important;
+}
+/* Add space between About button and statistics cards */
+.ve-btn-primary.mt-30 {
+    margin-bottom: 40px !important;
+}
+/* Reduce space between previous card and image section */
+
+.ve-section {
+    padding-top: 40px !important;
+}
+/* Add space between the image and Why Choose Us content */
+
+.ve-whyus-content {
+    padding-top: 30px !important;
+}
+/* =========================================
+   CTA TEXT SPACING FIX
+   ========================================= */
+
+.ve-cta-content {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+}
+
+/* CTA heading */
+.ve-cta-content h2 {
+    line-height: 1.35 !important;
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+}
+
+/* CTA paragraph */
+.ve-cta-content p {
+    line-height: 1.6 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+@media (max-width: 767px) {
+
+    .ve-cta-content {
+        padding-top: 35px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .ve-cta-content h2 {
+        font-size: 24px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .ve-cta-content p {
+        line-height: 1.6 !important;
+    }
+
+}
