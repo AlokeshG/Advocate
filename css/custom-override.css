@@ -1396,12 +1396,11 @@ body { padding-top:0; }
    ========================================================= */
 
 .ve-ai-assistant {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 100000;
+    position: fixed !important;
+    right: 14px !important;
+    bottom: 60px !important;
+    z-index: 9999 !important;
 }
-
 
 /* Main button */
 .ve-ai-assistant-btn {
@@ -1534,9 +1533,9 @@ body { padding-top:0; }
 @media (max-width: 767px) {
 
     .ve-ai-assistant {
-        right: 14px;
-        bottom: 18px;
-    }
+    right: 14px !important;
+    bottom: 60px !important;
+}
 
 
      .ve-ai-assistant-btn {
