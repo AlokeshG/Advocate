@@ -372,16 +372,76 @@ $answer_modal = $num1_modal + $num2_modal;
 
                 <div class="ve-form-group">
 
-                    <label>Mobile Number</label>
+    <label>Mobile Number</label>
 
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Your mobile number"
-                        required
-                    >
+    <div class="ve-phone-input">
 
-                </div>
+       <div class="ve-country-dropdown">
+
+    <button
+        type="button"
+        class="ve-country-selected"
+        id="ve-country-selected"
+    >
+        <span>India (+91)</span>
+        <i class="fa fa-angle-down"></i>
+    </button>
+
+    <div
+        class="ve-country-options"
+        id="ve-country-options"
+    >
+
+        <button type="button" data-code="+91">India (+91)</button>
+        <button type="button" data-code="+1">United States (+1)</button>
+        <button type="button" data-code="+1">Canada (+1)</button>
+        <button type="button" data-code="+44">United Kingdom (+44)</button>
+        <button type="button" data-code="+61">Australia (+61)</button>
+        <button type="button" data-code="+971">United Arab Emirates (+971)</button>
+        <button type="button" data-code="+65">Singapore (+65)</button>
+        <button type="button" data-code="+60">Malaysia (+60)</button>
+        <button type="button" data-code="+64">New Zealand (+64)</button>
+        <button type="button" data-code="+49">Germany (+49)</button>
+        <button type="button" data-code="+33">France (+33)</button>
+        <button type="button" data-code="+39">Italy (+39)</button>
+        <button type="button" data-code="+34">Spain (+34)</button>
+        <button type="button" data-code="+81">Japan (+81)</button>
+        <button type="button" data-code="+82">South Korea (+82)</button>
+        <button type="button" data-code="+86">China (+86)</button>
+        <button type="button" data-code="+92">Pakistan (+92)</button>
+        <button type="button" data-code="+880">Bangladesh (+880)</button>
+        <button type="button" data-code="+94">Sri Lanka (+94)</button>
+        <button type="button" data-code="+977">Nepal (+977)</button>
+        <button type="button" data-code="+27">South Africa (+27)</button>
+
+    </div>
+
+    <input
+        type="hidden"
+        name="country_code"
+        id="ve-country-code"
+        value="+91"
+    >
+
+</div>
+
+        <input
+            type="tel"
+            name="phone"
+            class="ve-phone-number"
+            placeholder="10-digit mobile number"
+            inputmode="numeric"
+            autocomplete="tel"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            minlength="10"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+            required
+        >
+
+    </div>
+
+</div>
 
 
                 <div class="ve-form-group">
@@ -1605,6 +1665,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdown = document.getElementById("ve-country-selected");
+    const countryDropdown = document.querySelector(".ve-country-dropdown");
+    const countryCode = document.getElementById("ve-country-code");
+    const options = document.querySelectorAll(
+        ".ve-country-options button"
+    );
+
+    if (!dropdown || !countryDropdown || !countryCode) {
+        return;
+    }
+
+    /* Open / close dropdown */
+    dropdown.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        countryDropdown.classList.toggle("open");
+
+    });
+
+
+    /* Select country */
+    options.forEach(function (option) {
+
+        option.addEventListener("click", function () {
+
+            const code = this.getAttribute("data-code");
+            const countryName = this.textContent;
+
+            countryCode.value = code;
+
+            dropdown.querySelector("span").textContent =
+                countryName;
+
+            countryDropdown.classList.remove("open");
+
+        });
+
+    });
+
+
+    /* Close when clicking outside */
+    document.addEventListener("click", function (event) {
+
+        if (!countryDropdown.contains(event.target)) {
+
+            countryDropdown.classList.remove("open");
+
+        }
+
+    });
 
 });
 </script>

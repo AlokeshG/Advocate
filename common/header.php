@@ -522,25 +522,26 @@ $isHomePage =
 </div>
 
 
-    <script>
-        (function () {
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-            var isFirstVisit =
-                !sessionStorage.getItem('site_visited_loader');
+    const preloader = document.getElementById("ve-preloader");
 
-            if (!isFirstVisit) {
+    if (!preloader) return;
 
-                var preloader =
-                    document.getElementById('ve-preloader');
+    setTimeout(function () {
 
-                if (preloader) {
-                    preloader.style.display = 'none';
-                }
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
 
-            }
+        setTimeout(function () {
+            preloader.style.display = "none";
+        }, 300);
 
-        })();
-    </script>
+    }, 1000);
+
+});
+</script>
 
 <?php endif; ?>
 
