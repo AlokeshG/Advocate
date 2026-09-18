@@ -4583,11 +4583,6 @@ body { padding-top:0; }
         text-align: center !important;
     }
 
-    /* Hide the old horizontal dividers */
-    .ve-counter-section .ve-counter-item::after {
-        display: none !important;
-    }
-
     /* Hide divider elements if present */
     .ve-counter-section .ve-counter-divider {
         display: none !important;
@@ -4839,4 +4834,133 @@ body { padding-top:0; }
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease;
+}
+/* Reduce space above Trusted badge */
+.ve-hero {
+    padding-top: 20px !important;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .ve-hero {
+        padding-top: 20px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .ve-hero {
+        padding-top: 10px !important;
+    }
+}
+/* Reduce space after Services section */
+.ve-services-section {
+    padding-bottom: 25px !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .ve-services-section {
+        padding-bottom: 10px !important;
+    }
+}
+.ve-counter-section {
+    padding-top: 15px !important;
+}
+
+@media (max-width: 767px) {
+    .ve-counter-section {
+        padding-top: 5px !important;
+    }
+}
+/* Counter row divider */
+@media (max-width: 767px) {
+    .ve-counter-section .ve-counter-item:nth-child(1)::after,
+    .ve-counter-section .ve-counter-item:nth-child(2)::after {
+        content: "";
+        display: block !important;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+    }
+}
+@media (max-width: 767px) {
+    .ve-counter-section .ve-counter-item {
+        position: relative;
+    }
+}
+/* Make footer text white */
+.ve-footer,
+.ve-footer p,
+.ve-footer span,
+.ve-footer li,
+.ve-footer a,
+.ve-footer h4,
+.ve-footer h5,
+.ve-footer button {
+    color: #fff !important;
+}
+/* ===== SERVICES DROPDOWN - CONTAINED UNDER SERVICES ===== */
+
+.ve-header .ve-nav > ul > li.has-drop {
+    position: relative !important;
+}
+
+/* Dropdown box */
+.ve-header .nav > ul > li.has-drop .ve-dropdown,
+.ve-header .ve-nav > ul > li.has-drop .ve-dropdown {
+    position: absolute !important;
+
+    top: calc(100% + 0px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 900px !important;
+    height: 105px !important;
+    min-height: 105px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 10px 20px !important;
+    margin: 0 !important;
+
+    z-index: 9999 !important;
+}
+
+/* Each service */
+.ve-header .ve-nav > ul > li.has-drop .ve-dropdown > li {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    text-align: center !important;
+}
+
+/* Service text */
+.ve-header .ve-nav > ul > li.has-drop .ve-dropdown > li > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+    min-height: 70px !important;
+
+    padding: 8px 10px !important;
+    line-height: 1.25 !important;
+}
+@media (max-width: 767px) {
+
+    .ve-footer .mb-50 {
+        margin-bottom: 5px !important;
+    }
+
+}
+@media (max-width: 767px) {
+    .ve-ai-assistant {
+        right: 14px !important;
+        bottom: 85px !important;
+    }
 }
